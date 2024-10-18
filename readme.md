@@ -23,6 +23,8 @@ To run the project :
 - Navigate to the directory containing the Python files.
 - Run the setup script to register the environment and run the          simulation for 1000 steps with random actions.
 
+Please run the project by running the setup.py file!!
+
 
 Install the necessary libraries using pip:
 

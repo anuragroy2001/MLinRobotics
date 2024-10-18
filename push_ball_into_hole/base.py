@@ -7,7 +7,7 @@ from gymnasium_robotics.utils import rotations
 #CHANGE CAMERA ANGLE FROM HERE
 
 DEFAULT_CAMERA_CONFIG = {
-    "distance": 3,
+    "distance": 3.5,
     "azimuth": 120,
     "elevation": -14.0,
     "lookat": np.array([1.3, 0.75, 0.55]),
