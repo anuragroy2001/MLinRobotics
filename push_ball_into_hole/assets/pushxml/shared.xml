@@ -14,39 +14,25 @@
         <material name="robot0:gripper_mat" shininess="0.03" specular="0.4" reflectance="0"></material>
         <material name="robot0:arm_mat" shininess="0.03" specular="0.4" reflectance="0"></material>
         <material name="robot0:head_mat" shininess="0.03" specular="0.4" reflectance="0"></material>
-        <material name="robot0:torso_mat" shininess="0.03" specular="0.4" reflectance="0"></material>
         <material name="robot0:base_mat" shininess="0.03" specular="0.4" reflectance="0"></material>
         
-        <mesh file="base_link_collision.stl" name="robot0:base_link"></mesh>
-        <mesh file="bellows_link_collision.stl" name="robot0:bellows_link"></mesh>
-        <mesh file="elbow_flex_link_collision.stl" name="robot0:elbow_flex_link"></mesh>
-        <mesh file="estop_link.stl" name="robot0:estop_link"></mesh>
-        <mesh file="forearm_roll_link_collision.stl" name="robot0:forearm_roll_link"></mesh>
-        <mesh file="gripper_link.stl" name="robot0:gripper_link"></mesh>
-        <mesh file="head_pan_link_collision.stl" name="robot0:head_pan_link"></mesh>
-        <mesh file="head_tilt_link_collision.stl" name="robot0:head_tilt_link"></mesh>
-        <mesh file="l_wheel_link_collision.stl" name="robot0:l_wheel_link"></mesh>
-        <mesh file="laser_link.stl" name="robot0:laser_link"></mesh>
-        <mesh file="r_wheel_link_collision.stl" name="robot0:r_wheel_link"></mesh>
-        <mesh file="torso_lift_link_collision.stl" name="robot0:torso_lift_link"></mesh>
-        <mesh file="shoulder_pan_link_collision.stl" name="robot0:shoulder_pan_link"></mesh>
-        <mesh file="shoulder_lift_link_collision.stl" name="robot0:shoulder_lift_link"></mesh>
-        <mesh file="upperarm_roll_link_collision.stl" name="robot0:upperarm_roll_link"></mesh>
-        <mesh file="wrist_flex_link_collision.stl" name="robot0:wrist_flex_link"></mesh>
-        <mesh file="wrist_roll_link_collision.stl" name="robot0:wrist_roll_link"></mesh>
-        <mesh file="torso_fixed_link.stl" name="robot0:torso_fixed_link"></mesh>
+        <mesh file="base_link.STL" name="robot0:base_link"></mesh>
+        <mesh file="link_1.STL" name="robot0:link_1"></mesh>
+        <mesh file="link_2.STL" name="robot0:link_2"></mesh>
+        <mesh file="link_3.STL" name="robot0:link_3"></mesh>
+        <mesh file="link_4.STL" name="robot0:link_4"></mesh>
+        <mesh file="link_5.STL" name="robot0:link_5"></mesh>
+        <mesh file="link_6.STL" name="robot0:link_6"></mesh>
+        <mesh file="link_7.STL" name="robot0:link_7"></mesh>
         <mesh file= "gripper2.stl" name="robot0:gripper"></mesh>
-
     </asset>
 
     <equality>
-        <weld body1="robot0:mocap" body2="robot0:gripper_link" solimp="0.9 0.95 0.001" solref="0.02 1"></weld>
+        <weld body1="robot0:mocap" body2="robot0:r_gripper_finger_link" solimp="0.9 0.95 0.001" solref="0.02 1"></weld>
     </equality>
-    
+
     <contact>
         <exclude body1="robot0:r_gripper_finger_link" body2="robot0:l_gripper_finger_link"></exclude>
-        <exclude body1="robot0:torso_lift_link" body2="robot0:torso_fixed_link"></exclude>
-        <exclude body1="robot0:torso_lift_link" body2="robot0:shoulder_pan_link"></exclude>
     </contact>
     
     <default>
@@ -65,3 +51,4 @@
         </default>
     </default>
 </mujoco>
+

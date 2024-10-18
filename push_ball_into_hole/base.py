@@ -249,7 +249,8 @@ class MujocoSimulation(get_base_env(MujocoRobotEnv)):
         )
 
     def _get_gripper_xpos(self):
-        body_id = self._model_names.body_name2id["robot0:gripper_link"]
+        body_id = self._model_names.body_name2id["robot0:link_7"]
+        # note to Check if link7 vs gripper_link
         return self.data.xpos[body_id]
 
     def _render_callback(self):
@@ -295,7 +296,7 @@ class MujocoSimulation(get_base_env(MujocoRobotEnv)):
 
         # Move end effector into position.
         gripper_target = np.array(
-            [-0.498, 0.005, -0.431]
+            [1.4, -0.1, -1.2]
         ) + self._utils.get_site_xpos(self.model, self.data, "robot0:grip")
         gripper_rotation = np.array([1.0, 0.0, 1.0, 0.0])
         self._utils.set_mocap_pos(self.model, self.data, "robot0:mocap", gripper_target)
